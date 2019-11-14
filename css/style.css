@@ -225,7 +225,6 @@ body {
 ==================================================*/
 
 header {
-    text-align: center;
     -webkit-transition: all .5s;
     transition: all .5s;
     height: 65px;
@@ -257,6 +256,10 @@ nav li a {
 .bg-nav {
     background: #fff;
     border-bottom: 1px solid #f3f3f3
+}
+
+.bg-nav img {
+    width: 30px
 }
 
 .bg-nav ul {
@@ -318,6 +321,7 @@ a.active {
     left: 110px;
     z-index: 1
 }
+
 
 /* experience section
 ==================================================*/
@@ -481,6 +485,7 @@ a.active {
     padding: 0px 20px;
     color: white;
     text-decoration: none;
+    border-radius: 30px;
 }
 
 .portfolio_filter {
@@ -493,6 +498,14 @@ a.active {
     display: block;
     margin-bottom: 30px;
 }
+.portfolio_item img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.portfolio_item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 .portfolio_item .portfolio_item_hover {
     position: absolute;
@@ -500,7 +513,7 @@ a.active {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: #425BB5;
+    background-color: rgba(66, 91, 181, .95);
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     opacity: 0;
@@ -508,6 +521,7 @@ a.active {
     transition: all .2s ease-in-out;
     color: #333;
 }
+
 
 .portfolio_item .portfolio_item_hover .item_info {
     text-align: center;
@@ -535,7 +549,7 @@ a.active {
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: #425BB5;
+    background-color: transparent;
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
@@ -579,8 +593,10 @@ a.active {
 }
 
 .portfolio_item img {
+/*
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+*/
 }
 
 .portfolio-padding {
@@ -736,7 +752,7 @@ fieldset {
 .social {
     padding-left: 0;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .social li {
@@ -755,27 +771,49 @@ fieldset {
     color: #425BB5;
 }
 
-
-.newicons {
-    padding-left: 0;
-    list-style: none;
+.title-hed {
+    height: 400px;
+    background: url(../img/masterheader.jpg);
+    background-size: cover;
 }
 
-.newicons li {
-    float: left;
+.download-div {
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 100px;
 }
-
-.newicons li a {
-    color: #333;
-    font-size: 105px;
-    margin-right: 30px;
-    transition: all .3s;
+.btn-preview {
+    background: #425BB5;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 5px;
     -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.btn-download {
+    background: #06D6A0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    padding: 10px 25px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.btn:hover, 
+.btn:focus {
+   color: #fff; 
+    opacity: .8;
 }
 
-.newicons li a:hover {
-    color: #425BB5;
-}
 
 /* Responsive media queries
 ==================================================*/
